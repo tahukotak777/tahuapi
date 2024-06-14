@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.get('/groqai/:content', async (req, res) => {
   const reply = await groqai(req.params.content)
-  res.json(reply)
+  res.send(reply)
 })
 
 app.listen(port, () => {
