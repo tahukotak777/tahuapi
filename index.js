@@ -1,8 +1,11 @@
 require('dotenv').config()
 const express = require('express')
 const groqai = require('./libs/groq')
+const cors = require('cors')
 const app = express()
 const port = 3000
+
+app.use(cors())
 
 app.get('/', (req, res) => {
   res.send('this is tahu api')
